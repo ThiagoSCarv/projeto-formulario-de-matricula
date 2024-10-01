@@ -50,8 +50,39 @@ select {
     gap: 1.25rem;
 }
 
+.input-wrapper small {
+    font: var(--text-sm);
+    color: #78716C;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
 .input-wrapper:has([disabled]) {
     opacity: .5;
+}
+
+input:invalid {
+    border: 0.125rem solid var(--semantic-error);
+}
+
+input {
+
+    &[required] + .error {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        font: var(--text-sm);
+        color: var(--semantic-error);
+        margin-top: .25rem;
+    }
+    
+    &:valid + .error {
+        display: none;
+    }
+
+    &:not(:focus):valid + .error {
+        display: none;
+    }
 }
 
 input:has([disabled]) {
