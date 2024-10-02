@@ -1,0 +1,28 @@
+button {
+    all: unset;
+    font-weight: 500;
+    color: var(--text-highlight);
+    padding: .75rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    &.bth-primary {
+        color: white;
+        background-color: #E43A12;
+    }
+    &.bth-primary:hover {
+        background-color: #F3541C;
+    }
+    &.bth-secondary {
+        color: var(--text-highlight);
+        background-color: white;
+        border: 1px solid var(--text-highlight);
+    }
+    &.bth-secondary:hover {
+        outline: .25rem solid var(--surface-secondary);
+        border: .125rem solid var(--stroke-highlight);
+        outline-offset: .1px;
+        color: #E43A12;
+    }
+}
